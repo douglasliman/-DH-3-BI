@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #202020;
+}
+
+.main-header{
+    background-color: #204040;
+    padding: 24px 48px;
+}
+.main-header button{
+    display: none;
+}
+.main-header ul{
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    transition: .5s ease-in-out;
+
+}
+
+.main-header ul li{
+    font-size: 24px;
+    color: white;
+    opacity: 0.9;
+}
+.main-header ul li:hover{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+
+}
+.main-header>ul>li>button{
+
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .main-header ul{
+        position: fixed;
+        top: 0;
+        left: -300px;
+         flex-direction: column;
+         background-color: #303030;
+         width: 300px;
+         padding: 24px;
+         height: 100vh;
+    }
+    .main-header ul.opened{
+        left: 0;
+    }
+    .main-header button{
+        display: block;
+    }
+}

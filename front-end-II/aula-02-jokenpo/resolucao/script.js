@@ -1,3 +1,5 @@
+// isNaN ( se for diferente de um numero )
+
 var userWannaPlay = confirm("Você ousa a desafiar a Skynet para um jokenpo?");
 
 if (userWannaPlay === true) {
@@ -10,7 +12,7 @@ function startGame() {
   let userPoint = 0;
   let machinePoint = 0;
 
-  //aqui começa o do
+  //aqui começa o do while
   do {
     let userPlay = Number(
       prompt("O que você deseja jogar? \n 1 = pedra \n 2 = papel \n 3= tesoura")
@@ -26,7 +28,7 @@ function startGame() {
         prompt("O que você deseja jogar? 1 = pedra, 2 = papel, 3 = tesoura")
       );
     }
-
+    
     //  CONTABILIZAÇÃO DE PONTOS
     if (userPlay === 1 && machinePlay === 2) {
       console.log("Você perdeu! ");
@@ -55,55 +57,3 @@ function startGame() {
     alert("SkyNet obliterou você");
   }
 }
-
-// validar as jogadas feitas, somente prosseguir com entradas válidas // feito
-//  AUMENTAR A DIFICULDADE
-// REFATORAR PARA FUNCTIONS
-
-
-// let userPoint = 0;
-// let machinePoint = 0;
-
-// perguntarUsuarioDesejaJogar();
-   
-
-// function perguntarUsuarioDesejaJogar() {
-//   let perguntarUsuarioDesejaJogar = confirm("Você ousa a desafiar a Skynet?");
-
-//   if (perguntarUsuarioDesejaJogar === true) {
-//     comecarJogo();
-//   } else {
-//     alert("Obrigado por visitar a pagina");
-//   }
-// }
-
-// function verificarGanhador(userPlay, machinePlay) {
-//   if (userPlay === 1 && machinePlay === 2) {
-//     console.log("Você perdeu! ");
-//     machinePoint++;
-//   } else if (userPlay === 2 && machinePlay === 3) {
-//     console.log("Você perdeu!");
-//     machinePoint++;
-//   } else if (userPlay === 3 && machinePlay === 1) {
-//     console.log(" Você perdeu! ");
-//     machinePoint++;
-//   } else if (userPlay === machinePlay) {
-//     console.log("Deu empate!");
-//   } else {
-//     console.log("Você venceu!! ");
-//     userPoint++;
-//   }
-
-//   do {
-//     comecarJogo();
-//   } while (userPoint < 2 || machinePoint < 2);
-// }
-
-// function comecarJogo() {
-//   let userPlay = Number(prompt("O que você deseja jogar? \n 1 = pedra \n 2 = papel \n 3= tesoura")
-//   );
-//   console.log(userPlay);
-//   let machinePlay = Math.floor(Math.random() * 3) + 1;
-//   console.log(machinePlay);
-// }
-
